@@ -21,10 +21,10 @@ pipeline {
         }
 
 
-        stage ('Deployment Stage') {
+        stage ('Cleaning Stage') {
             steps {
                 withMaven(maven : 'maven_3_5_0') {
-                    sh 'mvn deploy'
+                    sh 'mvn clean'
                 }
             }
         }
